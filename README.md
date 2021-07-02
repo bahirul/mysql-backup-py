@@ -2,7 +2,7 @@
 
 Python script for backup mysql databases.
 
-[![mysql-backup-py](https://asciinema.org/a/385235.svg)](https://asciinema.org/a/385235)
+[![mysql-backup-py](https://asciinema.org/a/1k4ijMmC5s8zY16EYpG75FMkr.svg)](https://asciinema.org/a/1k4ijMmC5s8zY16EYpG75FMkr)
 
 ## Install
 
