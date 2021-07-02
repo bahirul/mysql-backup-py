@@ -1,6 +1,8 @@
-# DNS Blacklist
+# mysql-backup-py
 
 Python script for backup mysql databases.
+
+[![mysql-backup-py](https://asciinema.org/a/385235.svg)](https://asciinema.org/a/385235)
 
 ## Install
 
