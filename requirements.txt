@@ -1,0 +1,4 @@
+mysql-connector-python==8.0.25
+protobuf==3.17.3
+schedule==1.1.0
+six==1.16.0
