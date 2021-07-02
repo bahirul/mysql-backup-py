@@ -50,7 +50,7 @@ mysql_conn = mysql.connector.connect(host=hostname,username=username,password=pa
 for f in os.listdir(base_path):
     #get full path
     f=os.path.join(base_path, f)
-    #remove older > 7 days
+    #remove older than validity params
     if os.stat(f).st_mtime < time.time() - validity:
         if os.path.isdir(f):
             print("deleting folder older than " + str(validity_value_config) + " " + validity_format_config +  " : " + f + "...")
