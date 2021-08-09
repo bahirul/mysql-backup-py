@@ -13,4 +13,8 @@ exclude=sys,mysql,phpmyadmin,information_schema,performance_schema
 #older than format
 value=7
 #format [second,day,week,month,year]
-format=second
+format=day
+
+## restore source ##
+[restore]
+source=backup/2021-07-02_23-57-02
