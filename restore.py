@@ -27,10 +27,11 @@ mysql_conn = mysql.connector.connect(host=hostname,username=username,password=pa
 if not os.path.isdir(folder_path):
     sys.exit("ERROR: folder " + folder_path + " not exist.")
 
+# count db restored
+dbcount = 0
 
 # list .sql
 for sqlfile in os.listdir(folder_path):
-    dbcount = 0
 
     if re.match(".*\.sql", sqlfile):
         dbname = str(sqlfile).replace(".sql","")
@@ -50,5 +51,8 @@ for sqlfile in os.listdir(folder_path):
         
         dbcount += 1
 
-    if dbcount > 0:
-        print("\nall databases has been restored")
+# finished
+if dbcount > 0:
+    print("\nall databases has been restored")
+else:
+    print("\nnothing restored")
