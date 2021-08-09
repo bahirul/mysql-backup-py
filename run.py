@@ -85,7 +85,7 @@ def getDatabases():
 def backupDatabases(databases):
     # run query
     for db in databases:
-        cmd="mysqldump -h " + hostname + " -u " + username + " -p" + password + " " + db + " > " + backup_path + "/" + db + ".sql"
+        cmd="mysqldump --set-gtid-purged=OFF -h " + hostname + " -u " + username + " -p" + password + " " + db + " > " + backup_path + "/" + db + ".sql"
         print("backup database " + db + " in progress...")
         os.system(cmd)
         print("backup database " + db + " done.")
