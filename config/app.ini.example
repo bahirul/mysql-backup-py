@@ -17,4 +17,7 @@ format=day
 
 ## restore source ##
 [restore]
+hostname=localhost
+username=root
+password=
 source=backup/2021-07-02_23-57-02

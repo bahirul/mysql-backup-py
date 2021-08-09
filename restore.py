@@ -12,9 +12,9 @@ config = configparser.ConfigParser()
 config.read(os.path.join(os.path.dirname(__file__), "config", "app.ini"))
 
 # config params
-hostname=config["server"]["hostname"]
-username=config["server"]["username"]
-password=config["server"]["password"]
+hostname=config["restore"]["hostname"]
+username=config["restore"]["username"]
+password=config["restore"]["password"]
 restore=config["restore"]["source"]
 
 # backup folder
