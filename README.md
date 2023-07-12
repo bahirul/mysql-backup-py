@@ -33,6 +33,9 @@ Python script for backup mysql databases.
 - restore backup
     - run `python3 restore.py`
 
+- restore backup (force/skip errors)
+    - run `python3 restore.py --force`
+
 ## Scheduler
 
 - run scheduler with nohup
