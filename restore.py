@@ -50,7 +50,7 @@ for sqlfile in os.listdir(folder_path):
         cur.execute("CREATE DATABASE IF NOT EXISTS " + dbname)
 
         # restore database
-        cmd = "mysql -h " + hostname + " + -u " + username + " -p" + password + " " + force + "-D" + dbname + " < " + folder_path + "/" + sqlfile
+        cmd = "mysql -h " + hostname + " -u " + username + " -p" + password + " " + force + "-D" + dbname + " < " + folder_path + "/" + sqlfile
         print("restore database " + dbname + " in progress...")
         os.system(cmd)
         print("restore database " + dbname + " done.")
