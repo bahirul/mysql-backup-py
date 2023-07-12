@@ -22,13 +22,16 @@ Python script for backup mysql databases.
 - required modules install (globaly)
     - run `pip install -r requirements.txt`
 
-## usae
+## usage
 
 - run script
     - run `python3 run.py`
 
 - clean folder
     - run `python3 flush.py`
+
+- restore backup
+    - run `python3 restore.py`
 
 ## Scheduler
 

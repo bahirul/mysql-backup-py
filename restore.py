@@ -11,6 +11,12 @@ import re
 config = configparser.ConfigParser()
 config.read(os.path.join(os.path.dirname(__file__), "config", "app.ini"))
 
+# agrs
+force = ""
+if len(sys.argv) > 1:
+    if sys.argv[1] == "--force":
+        force = "-f "
+
 # config params
 hostname=config["restore"]["hostname"]
 username=config["restore"]["username"]
@@ -44,7 +50,7 @@ for sqlfile in os.listdir(folder_path):
         cur.execute("CREATE DATABASE IF NOT EXISTS " + dbname)
 
         # restore database
-        cmd = "mysql -u " + username + " -p" + password + " " + dbname + " < " + folder_path + "/" + sqlfile
+        cmd = "mysql -h " + hostname + " + -u " + username + " -p" + password + " " + force + "-D" + dbname + " < " + folder_path + "/" + sqlfile
         print("restore database " + dbname + " in progress...")
         os.system(cmd)
         print("restore database " + dbname + " done.")
